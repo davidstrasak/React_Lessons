@@ -1,21 +1,12 @@
 import React, { useState } from "react";
 
+// Here when I click on the list item it gets removed.
 function ToDoItem(params) {
-  const [isDone, setIsDone] = useState(false);
+  function handleClick() {}
 
-  function handleClick() {
-    setIsDone((prevValue) => {
-      return !prevValue;
-    });
-  }
   return (
     <div onClick={handleClick}>
-      <li
-        key={params.key}
-        style={{ textDecoration: isDone ? "line-through" : "none" }}
-      >
-        {params.item}
-      </li>
+      <li key={params.key}>{params.item}</li>
     </div>
   );
 }
