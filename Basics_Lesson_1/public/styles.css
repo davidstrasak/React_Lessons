@@ -1,0 +1,16 @@
+.red {
+  color: red;
+}
+#mainHeading {
+  font-size: xx-large;
+}
+
+ul {
+  color: blue;
+}
+
+img {
+  display: inline;
+  margin: 10px;
+  width: 280px;
+}

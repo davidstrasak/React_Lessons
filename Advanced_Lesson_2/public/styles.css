@@ -1,0 +1,53 @@
+* {
+  text-align: center;
+}
+
+html {
+  background-color: lightgrey;
+}
+
+.box {
+  position: sticky;
+  background-color: aqua;
+  display: block;
+  width: 20%;
+  min-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 40%;
+  margin: 10px 0px;
+  border-radius: 20px;
+  padding: 10px 10px 30px 0px;
+}
+
+.box h2 {
+  position: absolute;
+  text-align: left;
+  display: block;
+  padding: 10px 20px 30px 20px;
+  margin: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: teal;
+}
+
+.avatar {
+  border-radius: 100%;
+  border: solid white 5px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.box img {
+  float: right;
+  left: 0%;
+}
+
+.box p {
+  position: relative;
+  text-align: left;
+  top: 80px;
+  margin: 0px 20px 0px 20px;
+}
