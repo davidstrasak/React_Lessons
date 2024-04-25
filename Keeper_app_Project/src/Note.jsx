@@ -57,7 +57,7 @@ function Note(props) {
             onChange={(event) => {
               setDescState(event.target.value);
             }}
-            onKeyDown={handleEnter}
+            // onKeyDown={handleEnter}
           ></input>
         </p>
         <button
