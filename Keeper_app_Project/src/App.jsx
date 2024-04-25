@@ -10,12 +10,43 @@ function App() {
     { name: "Do the thesis", desc: "Get the degree." },
   ];
   const [list, setList] = useState(initNotes);
+  function deleteCard(id) {
+    setList((originalList) => {
+      const newList = originalList.filter((item, index) => {
+        return index !== id;
+      });
+      return newList;
+    });
+  }
+
+  function addNotes(nameState, descState, setNameState, setDescState) {
+    setList((prevNotes) => {
+      const newNotes = [
+        ...prevNotes,
+        { name: nameState, desc: descState }, // Use the state values
+      ];
+      return newNotes;
+    });
+    setNameState("");
+    setDescState("");
+  }
+
   return (
     <div>
       <Header />
       {list.map((item, index) => {
-        return <Note name={item.name} desc={item.desc} inputmode="false" />;
+        return (
+          <Note
+            key={index}
+            name={item.name}
+            desc={item.desc}
+            id={index}
+            inputmode="false"
+            functions={deleteCard}
+          />
+        );
       })}
+      <Note inputmode="true" functions={addNotes} />
       <Footer />
     </div>
   );

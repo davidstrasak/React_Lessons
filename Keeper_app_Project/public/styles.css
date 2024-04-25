@@ -48,6 +48,16 @@ footer p {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
+.note h1 input {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p input {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
