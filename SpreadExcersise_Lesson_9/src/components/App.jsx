@@ -31,6 +31,16 @@ function App() {
     }
   }
 
+  function deleteItem(id) {
+    setList((prevList) => {
+      const filteredList = prevList.filter((num) => {
+        return !(num.id == id);
+      });
+      const newList = [...filteredList];
+      return newList;
+    });
+  }
+
   return (
     <div className="container">
       <div className="heading">
@@ -51,8 +61,13 @@ function App() {
       </div>
       <div>
         <ul>
-          {list.map((item) => (
-            <ToDoItem key={item.id} item={item.item} id={item.id} />
+          {list.map((item, index) => (
+            <ToDoItem
+              key={item.id}
+              item={item.item}
+              id={item.id}
+              onChecked={deleteItem}
+            />
           ))}
         </ul>
       </div>
