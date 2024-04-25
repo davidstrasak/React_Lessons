@@ -14,14 +14,19 @@ function Note(props) {
 
   if (props.inputmode === "false") {
     return (
-      <div
-        className="note"
-        onClick={() => {
-          props.functions(props.id);
-        }}
-      >
+      <div className="note">
         <h1>{props.name}</h1>
         <p>{props.desc}</p>
+        <span>
+          <button
+            onClick={() => {
+              props.functions(props.id);
+            }}
+            className="delete"
+          >
+            Delete
+          </button>
+        </span>
       </div>
     );
   } else {
@@ -55,6 +60,16 @@ function Note(props) {
             onKeyDown={handleEnter}
           ></input>
         </p>
+        <button
+          className="add"
+          onClick={(event) => {
+            props.functions(nameState, descState, setNameState, setDescState);
+            event.preventDefault();
+          }}
+          type="submit"
+        >
+          Add
+        </button>
       </form>
     );
   }
